@@ -21,26 +21,16 @@ from models.ExternalLink import ExternalLink
 from models.News import News
 
 # development
-# app.config.from_object(Development)
+app.config.from_object(Development)
 
 # production
-app.config.from_object(Staging)
+# app.config.from_object(Staging)
 
 @app.before_first_request
 def create_tables():
-    # db.create_all()
-    pass
+    db.create_all()
+    # pass
 
-# create a login required wrapper for user
-# def login_required(f):
-#     @wraps(f)
-#     def wrap(*args, **kwargs):
-#         if 'email' in session:
-#             return f(*args,**kwargs)
-#         else:
-#             flash('Unauthorized! Please log in', 'danger')
-#             return redirect(url_for('login',next=request.url))
-#     return wrap
 
 def login_required(func):
     @functools.wraps(func)
@@ -77,7 +67,6 @@ def home():
     return render_template("index.html")
 
 @app.route('/admin_news', methods = ['GET', 'POST'])
-@login_required
 def admin_news():
     if 'email' not in session:
         return redirect(url_for("login"))
@@ -101,7 +90,6 @@ def allowed_file(filename):
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 @app.route('/admin_images', methods = ['GET', 'POST'])
-@login_required
 def admin_images():
     if 'email' not in session:
         return redirect(url_for("login"))
@@ -142,7 +130,6 @@ def admin_images():
     return render_template("admin_external_links.html", images = images)
 
 @app.route('/admin_clients', methods = ['GET', 'POST'])
-@login_required
 def admin_clients():
     if 'email' not in session:
         return redirect(url_for("login"))
