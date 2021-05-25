@@ -24,7 +24,7 @@ from models.News import News
 # app.config.from_object(Development)
 
 # production
-app.config.from_object(Production)
+app.config.from_object(Staging)
 
 @app.before_first_request
 def create_tables():
