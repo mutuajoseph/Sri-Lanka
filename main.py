@@ -28,7 +28,8 @@ app.config.from_object(Staging)
 
 @app.before_first_request
 def create_tables():
-    db.create_all()
+    # db.create_all()
+    pass
 
 # create a login required wrapper for user
 # def login_required(f):
