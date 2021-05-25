@@ -21,4 +21,4 @@ class Production(Base):
     DATABASE = "decnc6o0b2c4i4"
     POSTGRES_USER = "fukakokzsluroc"
     POSTGRES_PASSWORD = "c2fdf5b6ed6c59d99fdcd13032a6fa38ed4173c78fe8d5a5953e1f17ee2fad59"
-    SQLALCHEMY_DATABASE_URI="postgres://fukakokzsluroc:c2fdf5b6ed6c59d99fdcd13032a6fa38ed4173c78fe8d5a5953e1f17ee2fad59@ec2-3-214-136-47.compute-1.amazonaws.com:5432/decnc6o0b2c4i4"
+    SQLALCHEMY_DATABASE_URI="postgresql://fukakokzsluroc:c2fdf5b6ed6c59d99fdcd13032a6fa38ed4173c78fe8d5a5953e1f17ee2fad59@ec2-3-214-136-47.compute-1.amazonaws.com:5432/decnc6o0b2c4i4"
