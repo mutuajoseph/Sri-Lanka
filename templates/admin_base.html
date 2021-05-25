@@ -2363,10 +2363,10 @@
 								<div class="top-bar">
 									<div class="time-content">
 										<img style="border-radius: 999%;" src="/static/images/download (1).png" alt="Kenya" height="20" width="20">
-										Date:&nbsp; <span id="demo"></span>
+										Date:&nbsp; <span id="nairobi"></span>
 									</div>
 									<div class="time-content"><img style="border-radius: 999%;" src="/static/images/download.png" alt="Sri lanka" height="20" width="20">
-										<!-- Date:&nbsp; 23/05/2021&nbsp; &nbsp;08:18 -->
+										Date:&nbsp; <span id="srilanka"></span>
 									</div>
 								</div>
 								<!-- Logo -->
@@ -2591,6 +2591,25 @@
       crossorigin="anonymous"
     ></script> -->
     <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+
+	<script>
+		var nairobi = new Date().toLocaleString("en-AU", {
+			timeZone: "Africa/Nairobi"
+		})
+
+		document.getElementById("nairobi").innerHTML = nairobi;
+		console.log(nairobi)
+	</script>
+
+	<script>
+		var srilanka = new Date().toLocaleString("en-AU", {
+			timeZone: "Asia/Colombo"
+		})
+
+		document.getElementById("srilanka").innerHTML = srilanka;
+		console.log(srilanka)
+	</script>
+	
 	<script>
 		var day = new Date().getDate();
 		var month = new Date().getMonth();
