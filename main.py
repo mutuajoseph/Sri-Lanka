@@ -55,6 +55,7 @@ def login():
             # session['password'] = password
             session['logged_in'] = True
             flash("Logged in Successfully", "success")
+            print("hello", session)
             return redirect(url_for('admin_clients'))
         else:
             flash("Login Failed. Please try again!!", "danger")
@@ -71,6 +72,7 @@ def admin_news():
     if 'email' not in session:
         return redirect(url_for("login"))
 
+    print("my logged session", session)
     if request.method == 'POST':
         title = request.form['title']
         description = request.form['description']
@@ -94,6 +96,7 @@ def admin_images():
     if 'email' not in session:
         return redirect(url_for("login"))
 
+    print("my logged session", session)
     if request.method == 'POST':        
         image = request.files['file']
         link = request.form['link']
@@ -134,6 +137,7 @@ def admin_clients():
     if 'email' not in session:
         return redirect(url_for("login"))
 
+    print("my logged session", session)
     clients = Client.query.all()
 
     return render_template("clients.html", clients = clients)

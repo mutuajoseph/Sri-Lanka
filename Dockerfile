@@ -9,4 +9,4 @@ RUN pip install -r /tmp/requirements.txt
 
 COPY ./app /app
 
-ENV MESSAGE "hello from Docker"
+ENV MESSAGE "Hello from Docker"
