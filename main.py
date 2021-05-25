@@ -21,7 +21,7 @@ from models.ExternalLink import ExternalLink
 from models.News import News
 
 # development
-app.config.from_object(Development)
+# app.config.from_object(Development)
 
 # production
 app.config.from_object(Production)
@@ -32,14 +32,14 @@ def create_tables():
     # pass
 
 
-def login_required(func):
-    @functools.wraps(func)
-    def secure_function(*args, **kwargs):
-        if "email" not in session:
-            return redirect(url_for("login", next=request.url))
-        return func(*args, **kwargs)
+# def login_required(func):
+#     @functools.wraps(func)
+#     def secure_function(*args, **kwargs):
+#         if "email" not in session:
+#             return redirect(url_for("login", next=request.url))
+#         return func(*args, **kwargs)
 
-    return secure_function
+#     return secure_function
 
 @app.route('/login', methods = ['GET', 'POST'])
 def login():
