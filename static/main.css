@@ -248,13 +248,13 @@ body {
 
 .card-slide {
     /* border: 1px solid #111; */
-    width: 95% !important;
-    /* height: 500px; */
+    width: 80% !important;
+    height: 450px;
     margin: 0 auto;
 }
 
 .caption-background {
-    background-color: rgba(34, 34, 34, 0.864);
+    background-color: rgba(34, 34, 34, 0.611);
 }
 
 #map {
@@ -263,3 +263,8 @@ body {
     width: 100%;
     /* The width is the width of the web page */
   }
+
+.slider-size {
+    width: 1500px;
+    height: 440px;
+}
