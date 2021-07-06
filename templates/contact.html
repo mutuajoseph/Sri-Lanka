@@ -21,8 +21,9 @@
                                                 <div class="image_frame">
                                                     <div class="image_wrapper">
                                                         <!-- <div class="mask"></div> -->
-                                                        <img class="scale" src="/static/images/IMG_20210430_164356.jpg.png.png"
-                                                            alt="consular_logo_1" width="700" height="200" />
+                                                        <!-- <img class="scale" src="/static/images/IMG_20210430_164356.jpg.png.png"
+                                                            alt="consular_logo_1" width="700" height="200" /> -->
+                                                            <div id="map"></div>
 
                                                     </div>
                                                 </div>
@@ -46,7 +47,7 @@
                                                         <li class="address"><span class="icon"><i
                                                                     class="icon-location"></i></span><span
                                                                 class="address_wrapper">
-                                                                <h3>Sri Lanka High Commission</h3>
+                                                                <h4>Sri Lanka High Commission</h4>
                                                                 <p>2nd Floor, West 1 - <br> Parklands Road, <br> Nairobi, Kenya <br />
                                                             </span>
                                                         </li>
@@ -145,5 +146,9 @@
     </div>
     </div>
     </div>
-
+    <script src="/static/map.js"></script>
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5y2Y1zfyWCWDEPRLDBDYuRoJ8ReHYXwY&callback=initMap&libraries=&v=weekly"
+    async
+  ></script>
 {% endblock %}

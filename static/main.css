@@ -17,8 +17,8 @@ body {
 
 .flex {
     display: flex;
-    justify-content: space-around;
-    gap: 1rem;
+    justify-content: space-between;
+    gap: 4rem;
     /* align-items: center; */
     /* padding: 10rem 0; */
 }
@@ -245,3 +245,21 @@ body {
     padding: .4rem 1rem;
     margin-bottom: 1rem;
 }
+
+.card-slide {
+    /* border: 1px solid #111; */
+    width: 95% !important;
+    /* height: 500px; */
+    margin: 0 auto;
+}
+
+.caption-background {
+    background-color: rgba(34, 34, 34, 0.864);
+}
+
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+  }
